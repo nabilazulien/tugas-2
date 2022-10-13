@@ -1,3 +1,5 @@
+import com.sun.security.jgss.GSSUtil;
+
 import java.util.Scanner;
 
 public class ProjectMain {
@@ -50,54 +52,217 @@ public class ProjectMain {
             if (command.equals("Bola")) {
                 System.out.println(DeskripsiBangunDatarRuang.bola());
             }
+
             if (command.equals("Segitiga help")) {
-                System.out.println("1. luas segitiga = alas * tinggi /2\n2. keliling segitiga = alas + tinggi + sisi");
-                System.out.println("silahkan pilih angka 1 atau 2");
-                int angka = scanner.nextInt();
-                if (angka == 1) {
-                    double luas = RumusBangunDatarRuang.luasSegitiga();
-                    System.out.println("luas segitiga adaalah = " + luas);
-                } else if (angka == 2) {
-                    double keliling = RumusBangunDatarRuang.kelilingsegitiga();
-                    System.out.println("keliling segitiga adalah = " + keliling);
-                }else{
-                    System.out.println("angka yang anda masukkan salah");
-                }
-
-
+              //  System.out.println("1. luas segitiga = alas * tinggi /2\n2. keliling segitiga = alas + tinggi + sisi");
+                System.out.println("list rumus segitiga = \n1. luas \n2. keliling\n 3. tinggi\n 4. alas");
             }
+            if (command.equals("luas segitiga")) {
+                System.out.println("luas = alas * tinggi /2");
+            }
+            if (command.equals("keliling segitiga")){
+                System.out.println("keliling = alas + tingi + sisi");
+            }
+            if (command.equals("segitiga luas input")){
+                double luasSegitiga = RumusBangunDatarRuang.luasSegitiga();
+                System.out.println("luas segitiga adalah = " +luasSegitiga);
+            }
+            if (command.equals("segitiga keliling input")){
+                double kelilingsegitiga = RumusBangunDatarRuang.kelilingsegitiga();
+                System.out.println("keliling segitiga adalah = " +kelilingsegitiga);
+            }
+
+
             if (command.equals("Persegi help")) {
-                System.out.println("Keliling persegi = 4 * s. Luas persegi = s * s");
-                System.out.println("masukkan ");
+                //System.out.println("1. Luas persegi = s * s\n2. Keliling persegi = 4 * s");
+                System.out.println("list rumus persegi = \n1. luas \n 2. keliling\n 3. sisi\n 4. diagonal");
             }
-            if (command.equals("Persegi panjang help")) {
-                System.out.println("panjang * lebar");
+            if (command.equals("luas persegi")){
+                System.out.println("luas = sisi * sisi");
             }
-            if (command.equals("Jajar genjang help")) {
-                System.out.println("Keliling = 2 x (a+b). Luas = a x t");
+            if (command.equals("keliling persegi")) {
+                System.out.println("keliling persegi = 4 * sisi");
             }
-            if (command.equals("Belah ketupat help")) {
-                System.out.println("L = ½ × d1 × d2.");
+            if (command.equals("luas psegi input")){
+                double luaspersegi = RumusBangunDatarRuang.luaspersegi();
+                System.out.println("luas persegi adalah = " +luaspersegi);
             }
-            if (command.equals("Layang-layang help")) {
-                System.out.println("L = ½ x d1 x d2");
-            }
-            if (command.equals("Trapesium help")) {
-                System.out.println("L = ½ (b1 + b2) t");
-            }
-            if (command.equals("Lingkaran help")) {
-                System.out.println("Luas Lingkaran ( L ) = π × r²");
-            }
-            if (command.equals("Kubus help")) {
-                System.out.println("V = s x s x s atau V = s3");
-            }
-            if (command.equals("Balok help")) {
-                System.out.println("V balok = p × l × t");
-            }
-            if (command.equals("Tabung help")) {
-                System.out.println("");
+            if (command.equals("keliling persegi input")){
+                double kelilingpersegi = RumusBangunDatarRuang.kelilingpersegi();
+                System.out.println("keliling persegi adalah = " +kelilingpersegi);
             }
 
+
+            if (command.equals("Persegi panjang help")) {
+                System.out.println("1. luas peregi panjang = panjang * lebar\n" +
+                        "2. keliling persegi panjang = 2 * panjang + 2 * lebar");
+                System.out.println("list rumus persegi panjang = \n1. luas\n2. keliling\n 3. panjang\n 4. lebar\n 5. diagonal");
+            }
+            if (command.equals("luas persegi panjang")){
+                System.out.println("luas = panjang * lebar");
+            }
+            if (command.equals("keliling persegi panjang = ")){
+                System.out.println("2 * panjang + 2 * lebar");
+            }
+            if (command.equals("luas persegi panjang input")){
+                double luaspersegipanjang = RumusBangunDatarRuang.luaspersegipanjang();
+                System.out.println("luas persegi panjang adalah = " +luaspersegipanjang);
+            }
+            if (command.equals("keliling prsegi panjang input")){
+                double kelilingpersegipanjang = RumusBangunDatarRuang.kelilingpersegipanjang();
+                System.out.println("keiling persegi panjang adalah = " +kelilingpersegipanjang);
+            }
+
+
+            if (command.equals("jajar genjang help")){
+                System.out.println("list rumus jajar genjang = \n1. luas\n 2. keliling\n 3. sii alas\n 4. sisi miring");
+            }
+            if (command.equals("luas jajar genjang")){
+                System.out.println("luas = alas * tinggi");
+            }
+            if (command.equals("keliling jajar genjang"))
+                System.out.println("keliling = 2 * (a + b)");
+            if (command.equals("luas jajar genjang input")){
+                double luasjajargenjang = RumusBangunDatarRuang.luasjajargenjang();
+                System.out.println("luas jajar genjang adalah =" + luasjajargenjang);
+            }
+            if (command.equals("keliling jajar genjang input")){
+                double kelilingjajargenjang = RumusBangunDatarRuang.kelilingjajargenjang();
+                System.out.println("keliling jajar genjang adalah = " +kelilingjajargenjang);
+            }
+
+
+            if (command.equals("Belah ketupat help")) {
+                System.out.println("1. luas \n2. keliling \n3. sisi\n4. diagonal 1\n5. diagonal 2");
+            }
+            if (command.equals("luas belah ketupat")){
+                System.out.println("luas = di * d2 / 2");
+            }
+            if (command.equals("keliling belah ketupat")){
+                System.out.println("keliling = 4 * sisi");
+            }
+            if (command.equals("luas belah ketupat input")){
+                double luasbelahketupat = RumusBangunDatarRuang.luasbelahketupat();
+                System.out.println("luas belah ketupat = " +luasbelahketupat);
+            }
+            if (command.equals("keliling belah ketupat input")){
+                double kelilingbelahketupat = RumusBangunDatarRuang.kelilingbelahketupat();
+                System.out.println("keliling belah ketupat adalah = " +kelilingbelahketupat);
+            }
+            if (command.equals("diagonal 1 belah ketupat input")){
+                double diagonal1belahketupat = RumusBangunDatarRuang.diagonal1belahketupat();
+                System.out.println("diagonal 1 blah ketupat adalah = " +diagonal1belahketupat);
+            }
+            if (command.equals("diagonal 2 belah ketupat input")){
+                double diagonal2belahketupat = RumusBangunDatarRuang.diagonal2belahketupat();
+                System.out.println("diagonal 2 belah ketupat adalah = " +diagonal2belahketupat);
+            }
+
+
+            if (command.equals("Layang-layang help")) {
+                System.out.println("1. luas\n2. keliling\n3. diagonal 1\n4. diagonal 2");
+            }
+            if (command.equals("luas layang-layang")){
+                System.out.println("luas = di * d2 /2");
+            }
+            if (command.equals("keliling layang-layang")){
+                System.out.println("keliling = a + b + c + d");
+            }
+            if (command.equals("luas layang-layang input")){
+                double luaslayanglayang = RumusBangunDatarRuang.luaslayanglayang();
+                System.out.println("luas layang-layang adalah = " +luaslayanglayang);
+            }
+            if (command.equals("keliling layang-layang input")){
+                double kelilinglayanglayang = RumusBangunDatarRuang.kelilinglayanglayang();
+                System.out.println("keliling layang-layang adalah = " +kelilinglayanglayang);
+            }
+
+
+            if (command.equals("Trapesium help")) {
+                System.out.println("1. luas\n2. keliling\n3. tinggi");
+            }
+            if (command.equals("luas trapesium")){
+                System.out.println("luas = jumlah rusuk sejajar * tinggi");
+            }
+            if (command.equals("keliling trapesium")){
+                System.out.println("keliling = AB + BC + CD +DA");
+            }
+            if (command.equals("luas trapesium input")){
+                double luastrapesium = RumusBangunDatarRuang.luastrapesium();
+                System.out.println("luas trapesium aalah = " +luastrapesium);
+            }
+            if (command.equals("keliling trapesium input")){
+                double luastrapesium = RumusBangunDatarRuang.luastrapesium();
+                System.out.println("keliling tapesium aalah");
+            }
+
+
+            if (command.equals("Lingkaran help")) {
+                System.out.println("1. luas\n2. keliling\n3. diameter\n4. jari-jari");
+            }
+            if (command.equals("luas lingkaran")) {
+                System.out.println("luas = π * r * r");
+            }
+            if (command.equals("keliling ligkaran")){
+                System.out.println("keliling = 2 * π * r");
+            }
+            if (command.equals("luas lingkaran input")) {
+                double luaslingkaran = RumusBangunDatarRuang.luaslingkaran();
+                System.out.println("luas lingkaran adalah = " +luaslingkaran);
+            }
+            if (command.equals("keliling lingkaran input")){
+                double kelilinglingkaran = RumusBangunDatarRuang.kelilinglingkaran();
+                System.out.println("kelililng lingkaran aalah = " +kelilinglingkaran);
+            }
+
+
+            if (command.equals("Kubus help")) {
+                System.out.println("1. volume\n2. luas permukaan\n3. sisi rusuk\n" +
+                        "4. diagonal sisi\n5. diagonal ruang\n6. luas bidang diagonal");
+            }
+            if (command.equals("volume kubus")) {
+                System.out.println("volume = sisi * sisi * sisi");
+            }
+            if (command.equals("volume kubus input")) {
+                double volumekubus = RumusBangunDatarRuang.volumekubus();
+                System.out.println("volume kubus adalah = " +volumekubus);
+            }
+
+
+            if (command.equals("Balok help")) {
+                System.out.println("1. volume\n2. luas permukaan\n3. panjang\n4. lebar\n" +
+                        "5. tinggi\n6. diagonal bidang\n7. diagonal  ruang\n8. luas bidang diagonal");
+            }
+            if (command.equals("volume balok")) {
+                System.out.println("volume = p * l * t");
+            }
+            if (command.equals("volume balok input")) {
+                double volumebalok = RumusBangunDatarRuang.volumebalok();
+                System.out.println("volume balok adalah = " +volumebalok);
+            }
+
+
+            if (command.equals("Tabung help")) {
+                System.out.println("V tabung = π * r * tinggi");
+            }
+            if (command.equals("volume tabung")) {
+                System.out.println("volume = π * r * tinggi");
+            }
+            if (command.equals("volume tabung input")) {
+                double volumetabung = RumusBangunDatarRuang.volumetabung();
+                System.out.println("volume tabung adalah = " +volumetabung);
+            }
+
+            if (command.equals("Bola help")) {
+                System.out.println("1. volume\n2. luas permukaan\n3. jari-jari");
+            }
+            if (command.equals("volume bola")) {
+                System.out.println("volume = (4/3) * π * r * r* r");
+            }
+            if (command.equals("volume bola input")) {
+                double volumebola = RumusBangunDatarRuang.volumebola();
+                System.out.println("volume bola adalah = " +volumebola);
+            }
         }
 
 
