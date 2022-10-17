@@ -20,7 +20,11 @@ public class RumusBangunDatarRuang {
 //        }
     }
 
+<<<<<<< HEAD
     public static double kelilingsegitiga() {
+=======
+    public static double kelilingsegitiga(){
+>>>>>>> origin/main
         Scanner scanner = new Scanner(System.in);
         System.out.println("masukkan alas = ");
         double alas = scanner.nextInt();
@@ -32,6 +36,7 @@ public class RumusBangunDatarRuang {
     }
 
 
+<<<<<<< HEAD
     public static double luaspersegi() {
         Scanner scanner = new Scanner(System.in);
         System.out.println("masukkan sisi = ");
@@ -235,4 +240,3 @@ public class RumusBangunDatarRuang {
         double volumebola = (4/3) * π * r * r* r;
         return volumebola;
     }
-}
