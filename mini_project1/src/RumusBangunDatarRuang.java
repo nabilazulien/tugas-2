@@ -10,21 +10,11 @@ public class RumusBangunDatarRuang {
         double luas = alas * tinggi / 2;
         return luas;
 
-        //        if (angka == 2){
-//            System.out.println("masukan alas = ");
-//            double alas = scanner.nextInt();
-//            System.out.println("masukkan tinggi = ");
-//            double tinggi = scanner.nextInt();
-//            double sisi = Math.sqrt(Math.pow(alas, 2) + Math.pow(tinggi, 2));
-//            System.out.println("keliling segitiga =" +alas + tinggi + sisi);
-//        }
     }
 
-<<<<<<< HEAD
+
     public static double kelilingsegitiga() {
-=======
-    public static double kelilingsegitiga(){
->>>>>>> origin/main
+
         Scanner scanner = new Scanner(System.in);
         System.out.println("masukkan alas = ");
         double alas = scanner.nextInt();
@@ -36,7 +26,6 @@ public class RumusBangunDatarRuang {
     }
 
 
-<<<<<<< HEAD
     public static double luaspersegi() {
         Scanner scanner = new Scanner(System.in);
         System.out.println("masukkan sisi = ");
@@ -237,6 +226,7 @@ public class RumusBangunDatarRuang {
         double π = scanner.nextInt();
         System.out.println("masukkan r = ");
         double r = scanner.nextInt();
-        double volumebola = (4/3) * π * r * r* r;
+        double volumebola = (4 / 3) * π * r * r * r;
         return volumebola;
     }
+}
